@@ -1,0 +1,125 @@
+"use strict";
+
+try {
+    angular.module("commonControlsTranslations");
+} catch (e) {
+    angular.module("commonControlsTranslations", [ "pascalprecht.translate" ]);
+}
+
+angular.module("commonControlsTranslations").config([ "$translateProvider", function($translateProvider) {
+    var translations = {
+        general: {
+            "no-link-hover": "Подключить",
+            "no-link": "Без ссылки",
+            YO: "Привет"
+        },
+        cc: {
+            "media-preview": {
+                "tab-label": {
+                    gallery: "Галерея",
+                    image: "Фото",
+                    shape: "Форма",
+                    video: "Видео"
+                },
+                "button-text": {
+                    customize: "Настроить",
+                    replace: "Заменить",
+                    edit: "Изменить",
+                    "change-gallery": "Изменить галерею",
+                    settings: "Settings"
+                },
+                label: {
+                    media: "Медиа"
+                },
+                gallery: {
+                    change: "Изменить тип галереи",
+                    select: "Редактировать галерею"
+                }
+            },
+            "button-editor-link": {
+                "button-text-link": {
+                    label: "+ Ссылка"
+                }
+            },
+            "c6-list-item-menu": {
+                "item-to-show": {
+                    label: "Сделать страницей"
+                },
+                show: {
+                    label: "Показать"
+                },
+                delete: {
+                    label: "Удалить"
+                },
+                duplicate: {
+                    label: "Создать копию"
+                },
+                hide: {
+                    label: "Скрыть"
+                },
+                edit: {
+                    label: "Редактировать"
+                }
+            },
+            "button-editor": {
+                "button-text": {
+                    label: "ТЕКСТ КНОПКИ"
+                },
+                "button-link": {
+                    label: "ССЫЛКА"
+                }
+            },
+            "c6-list": {
+                "add-new-item": {
+                    title: "+ Добавить элемент"
+                }
+            }
+        },
+        tooltips: {
+            image: "Фото",
+            "richtext_clear-formatting": "Отменить форматирование",
+            playground: {
+                "tab-tooltip": "my cool tab tooltip",
+                tooltip: "Это подсказка",
+                compile: '---\x3e <span class="cc-tooltip-link"><a data-hook="inline-tooltip-link" ng-click="$ctrl.compiledTooltipClick()" href="">Нажмите здесь</a></span> <---',
+                previous: "Назад",
+                simple: "Это подсказка об ошибке",
+                complex: "Lorem ipsum dolor sit amet, elit sit sollicitudin enim, turpis pretium etiam immet, elit sit sollicitudin enim, turpis pretium etiam im met, elit sit sollicitudin enim, turpis pretium etiam im",
+                "tab-disabled-tooltip": "Baga, it`s disabled",
+                next: "Вперед"
+            },
+            C4_VIDEO: "Перейти к видео",
+            edit: "Редактировать",
+            "richtext_add-link": "Ссылка",
+            pattern: "Паттерн",
+            C4_SHAPE: "Перейти к форме",
+            "richtext_edit-link": "Изменить ссылку",
+            settings: "Настройка",
+            video: "Видео",
+            hidden_item: "Элемент скрыт",
+            replace: "Replace",
+            richtext_bold: "Жирный",
+            help: "Помощь",
+            crop: "Кадрировать",
+            disabled_item: "Элемент нельзя скрыть",
+            C4_IMAGE: "Перейти к фото",
+            gallery: "Галерея",
+            "richtext_cannot-link": "Выделите текст ссылки.",
+            shape: "Форма",
+            richtext_numbers: "Нумерация",
+            richtext_bullets: "Список",
+            richtext_underline: "Подчеркнутый",
+            back: "Назад",
+            C4_GALLERY: "Перейти к галерее",
+            hide_item: "Нажмите, чтобы скрыть с сайта",
+            color: "Цвет",
+            richtext_italic: "Курсив",
+            show_item: "Нажмите, чтобы показать на сайте"
+        }
+    };
+    $translateProvider.translations("ru", translations);
+    $translateProvider.translations(translations);
+    if ($translateProvider.preferredLanguage) {
+        $translateProvider.preferredLanguage("ru");
+    }
+} ]).value("preferredLanguage", "ru");
